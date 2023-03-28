@@ -105,6 +105,10 @@ const accounts = [
   // },
 ];
 
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
 app.get('/api/account-insights', (req, res) => {
   const AccountInsights = accounts.map(async (account) => {
     const { since, until } = req.query;
